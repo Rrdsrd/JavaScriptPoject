@@ -105,4 +105,16 @@ console.log(Object.entries(username2))
 console.log(typeof(Object.entries(username2)))
 //when going through loop we need ti check whether an element exist on not
 console.log(username.hasOwnProperty("isloggedin"))
+//object destructuring
+const account_details={
+    accountholder_name:"Smruti",
+    accountholder_age:"42",
+    accountholder_address:"Bhubaneswar",
+    accountholder_id:"sb00067823457"
+}
 
+console.log(account_details.accountholder_address)
+const {accountholder_address}=account_details
+console.log(accountholder_address)
+const {accountholder_address:address}=account_details
+console.log(address)
