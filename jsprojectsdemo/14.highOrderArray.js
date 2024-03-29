@@ -52,4 +52,48 @@ for (const key in information)
     console.log(key)
     console.log(information[key])
 }
-//as map are not itrative so we can't use for in loop here
+//as map are not itratible so we can't use for in loop here
+const programming_languages=["python","Javascript","java","cpp","net"]
+//Higher order function(callback function doesn't have any name)
+programming_languages.forEach(function(item){
+    console.log(item)
+})
+//we also do the same using arrow funcion:
+const programming_languages1=["python","Javascript","java","cpp","net"]
+//Higher order function(by using arrow function)
+programming_languages1.forEach(()=>{
+    console.log()
+})
+//any function we can pass as reference in forEach
+const coding = ["js", "ruby", "java", "python", "cpp"]
+function printMe(item){
+        console.log(item);
+     }
+    
+    coding.forEach(printMe)
+
+programming_languages1.forEach((item,index,arr)=>{
+    console.log(item,index,arr)
+})
+//array consist of object mostly used foreach
+const mycoding=[
+    {
+        languageName:"JavaScript",
+        languageFileName:"js"
+    },
+    {
+        languageName:"Python",
+        languageFileName:"py"
+    },
+    {
+        languageName:"Rubby",
+        languageFileName:"rb"
+    },
+
+]
+mycoding.forEach((item)=>{
+console.log(item)
+})
+mycoding.forEach((item)=>{
+    console.log(item.languageName)
+    })
