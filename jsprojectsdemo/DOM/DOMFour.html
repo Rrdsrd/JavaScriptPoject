@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html language="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Learning </title>
+    </head>
+<body style="background-color: bisque;color: blueviolet;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    function addOptimizationLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimizationLanguage("Java")
+    addOptimizationLanguage("CPP")
+    //Edit
+    const second_lang=document.querySelector("li:nth-child(2)")
+    const newli=document.createElement("li")
+    newli.textContent="dotNet"
+    second_lang.replaceWith(newli)
+
+    //Edit
+    const first_lang=document.querySelector("li:first-child")
+    console.log(first_lang)
+    first_lang.outerHTML='<li>TypeScript</li>'
+    //Remove Elements
+    const last_lang=document.querySelector("li:last-child")
+    last_lang.remove()
+</script>
+
+</html>
