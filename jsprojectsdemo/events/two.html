@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html language="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Learning </title>
+    </head>
+<body>
+<div class="bg-black"> 
+    <h1 class=""heading>
+        Javascript Events
+    </h1>
+    <p>Javascript Asynch and synch</p>
+    <button id="stop">Stop</button>
+</div>
+</body>
+<script>
+    const setTime1=function() {
+        console.log("hii smruti")
+    }
+    const setTimeout1=setTimeout(setTime1,2000)
+   const changeText=function(){
+    document.querySelector('h1').innerHTML="This is the change Text of JS"
+   }
+   const changeText1=setTimeout(changeText,2000)
+
+
+   document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(changeText1)
+    console.log('Stopped')
+   })
+
+</script>
+</html>
